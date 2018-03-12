@@ -44,6 +44,12 @@ body {
   height: 35px;
 }
 
+.logo:hover {
+  animation-name: moveFromLeftToRight;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+}
+
 .text-box {
   position: absolute;
   top: 50%;
