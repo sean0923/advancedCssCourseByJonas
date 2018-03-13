@@ -1,0 +1,17 @@
+.row {
+  max-width: $grid-width;
+  background-color: $color-white-gray;
+  min-height: 1rem;
+  &:not(:last-child) {
+    margin-bottom: $grid-row-gap;
+  }
+
+  .col-1-2 {
+    width: calc((100% - #{$grid-col-gap}) / 2);
+    background-color: rgba($color-primary, 0.5);
+    float: left;
+    &:not(:last-child) {
+      margin-right: $grid-col-gap;
+    }
+  }
+}

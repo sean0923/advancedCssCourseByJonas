@@ -125,3 +125,16 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  min-height: 1rem; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row .col-1-2 {
+    width: calc((100% - 6rem) / 2);
+    background-color: rgba(126, 213, 111, 0.5);
+    float: left; }
+    .row .col-1-2:not(:last-child) {
+      margin-right: 6rem; }
