@@ -1,11 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 @keyframes moveFromLeftToRight {
   0% {
     opacity: 0;
@@ -48,6 +40,7 @@ body {
   box-sizing: border-box; }
 
 body {
+  font-size: 1.6rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
@@ -81,9 +74,7 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 1000rem;
-  /* after certain number effect become same */
-  position: relative;
-  font-size: 1.6rem; }
+  position: relative; }
 
 .btn--white {
   background-color: #fff;
@@ -119,9 +110,7 @@ body {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
-  /* scale img as large as possible */
   background-position: top;
-  /* top does not get crop when resize*/
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
   .header__logo-box {
