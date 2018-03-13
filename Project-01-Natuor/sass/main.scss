@@ -6,13 +6,20 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
 *,
 *:before,
 *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -21,42 +28,54 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../img/hero.jpg');
   background-size: cover;
   /* scale img as large as possible */
   background-position: top;
   /* top does not get crop when resize*/
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
+  position: relative;
+}
 
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem; }
+  left: 4rem;
+}
 
 .header__logo {
-  height: 3.5rem; }
+  height: 3.5rem;
+}
 
 /* .logo:hover {
   animation-name: moveFromLeftToRight;
   animation-duration: 1s;
   animation-delay: 0.1s;
 } */
+
 .header__text-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+}
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+}
 
 .heading-primary--main {
   display: block;
@@ -65,7 +84,8 @@ body {
   letter-spacing: 3.5rem;
   animation-name: moveFromLeftToRight;
   animation-duration: 1s;
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+}
 
 .heading-primary--sub {
   display: block;
@@ -74,7 +94,8 @@ body {
   letter-spacing: 1.74rem;
   animation-name: moveFromRightToLeft;
   animation-duration: 1s;
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+}
 
 .btn:link,
 .btn:visited {
@@ -85,15 +106,18 @@ body {
   border-radius: 1000rem;
   /* after certain number effect become same */
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+}
 
 .btn:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-.2rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
 
 .btn:active {
-  transform: translateY(-0.05rem);
-  box-shadow: 0rem 0.5rem 2rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-.05rem);
+  box-shadow: 0rem .5rem 2rem rgba(0, 0, 0, .2);
+}
 
 .btn::after {
   content: "";
@@ -105,50 +129,68 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s; }
+  transition: all .4s;
+}
 
 .btn--white {
   background-color: #fff;
-  color: #777; }
+  color: #777;
+}
 
 .btn-white::after {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .btn--animated {
   animation: moveFromBottomToTop .5s ease-out .5s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}
 
 /* comment out cuz did not like the effect */
+
 /* .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 } */
+
 @keyframes moveFromLeftToRight {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
   80% {
-    transform: translateX(0.1rem); }
+    transform: translateX(.1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveFromRightToLeft {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
   80% {
-    transform: translateX(-0.1rem); }
+    transform: translateX(-.1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveFromBottomToTop {
   0% {
     opacity: 0;
-    transform: translateY(3rem); }
+    transform: translateY(3rem);
+  }
   80% {
-    transform: translateY(-0.1rem); }
+    transform: translateY(-.1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
