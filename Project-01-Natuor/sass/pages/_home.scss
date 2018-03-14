@@ -1,7 +1,5 @@
-.test {
-  &.some{
-    background: red;
-    height: 10rem;
-    width: 10rem;
-  }
+.section-about {
+  background-color: $color-gray-light-1;
+  padding: 25rem 0;
+  margin-top: -20vh;
 }
