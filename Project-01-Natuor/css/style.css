@@ -138,3 +138,8 @@ body {
     float: left; }
     .row .col-1-2:not(:last-child) {
       margin-right: 6rem; }
+
+.test.some {
+  background: red;
+  height: 10rem;
+  width: 10rem; }
