@@ -1,6 +1,6 @@
 .row {
   max-width: $grid-width;
-  background-color: $color-white-gray;
+  // background-color: $color-white-gray;
   min-height: 1rem;
   margin: 0 auto;
   &:not(:last-child) {
@@ -13,7 +13,7 @@
   // [class$="col-"] { // select end with
   // [class*="col-"] { // select if contain
   [class^="col-"] {
-    background-color: rgba($color-primary, 0.5);
+    // background-color: rgba($color-primary, 0.5);
     float: left;
     &:not(:last-child) {
       margin-right: $grid-col-gap;
