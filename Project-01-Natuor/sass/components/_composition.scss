@@ -16,6 +16,10 @@
       outline: .5rem solid $color-primary;
     }
 
+    &:hover &__photo:not(:hover) {
+      transform: scale(.95);
+    }
+
     &--p1 {
       left: 0;
       top: -2rem;
@@ -30,9 +34,5 @@
       left: 10rem;
       top: 10rem;
     }
-  }
-
-  &:hover &__photo:not(:hover) {
-    transform: scale(.95);
   }
 }
