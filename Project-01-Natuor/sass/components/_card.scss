@@ -1,12 +1,18 @@
 .card {
   perspective: 150rem; // big num perpective need to be located at the parent of transform:rotateY
   -moz-perspective: 150rem; // pretty new so firefox need this line
+  position: relative;
+  height: 50rem; // height of the parent and child need to be same in order to do perpective somehow clearfix does not work ...
 
   &__side {
+    height: 50rem; // height of the parent and child need to be same in order to do perpective somehow clearfix does not work ...
+    width: 100%;
+    position: absolute;
     color: #fff;
     font-size: 3.6rem;
-    height: 50rem;
-    transition: all .8s;
+    transition: all .8s ease;
+    backface-visibility: hidden; // entire back side of the card is not shown at all ~
+
     &--front {
       background-color: rgba(red, 0.5);
     }
@@ -21,6 +27,6 @@
   }
 
   &:hover &__side--back {
-    transform: rotateY(0);
+    transform: rotateY(360deg);
   }
 }
