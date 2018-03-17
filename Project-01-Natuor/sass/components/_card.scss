@@ -13,12 +13,24 @@
     transition: all .8s ease;
     backface-visibility: hidden; // entire back side of the card is not shown at all ~
 
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
     &--front {
       background-color: rgba(red, 0.5);
     }
     &--back {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
       background-color: rgba(green, 0.5);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+        background-color: green;
+      }
     }
   }
 
@@ -27,6 +39,6 @@
   }
 
   &:hover &__side--back {
-    transform: rotateY(360deg);
+    transform: rotateY(0);
   }
 }
