@@ -14,6 +14,7 @@
     backface-visibility: hidden; // entire back side of the card is not shown at all ~
 
     border-radius: 3px;
+    overflow: hidden; // for prevent image overflowing so that border radius can be shown
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
     &--front {
@@ -40,5 +41,21 @@
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  // Front side styling
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen; // cannot use this in safari or ms edge yet
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url('../img/nat-5.jpg');
+    }
   }
 }
