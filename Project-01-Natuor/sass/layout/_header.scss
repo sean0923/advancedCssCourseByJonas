@@ -8,6 +8,7 @@
     url('../img/hero.jpg');
   background-size: cover; // scale img as large as possible
   background-position: top; // top does not get cropped when resized
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
   &__logo-box {
