@@ -2,10 +2,10 @@
   perspective: 150rem; // big num perpective need to be located at the parent of transform:rotateY
   -moz-perspective: 150rem; // pretty new so firefox need this line
   position: relative;
-  height: 50rem; // height of the parent and child need to be same in order to do perpective somehow clearfix does not work ...
+  height: 52rem; // height of the parent and child need to be same in order to do perpective somehow clearfix does not work ...
 
   &__side {
-    height: 50rem; // height of the parent and child need to be same in order to do perpective somehow clearfix does not work ...
+    height: 52rem; // height of the parent and child need to be same in order to do perpective somehow clearfix does not work ...
     width: 100%;
     position: absolute;
     transition: all .8s ease;
@@ -78,7 +78,7 @@
 
   &__heading-span {
     padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone; // add paddding to line break span 
+    -webkit-box-decoration-break: clone; // add paddding to line break span
     box-decoration-break: clone; // if these are not applied then mid part wont' have padding
 
     &--1 {
@@ -89,4 +89,27 @@
       );
     }
   }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+
+      li {
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+
+    }
+
+  }
+
 }
