@@ -5,22 +5,27 @@
   background-color: $color-white;
   border-radius: 3px;
   padding: 6rem;
+  padding-left: 8rem;
   font-size: $default-font-size;
+  transform: skewX(-12deg);
 
   &__shape {
     width: 15rem;
     height: 15rem;
     background-color: $color-test;
     float: left;
-    transform: translateX(-3rem);
+    transform: translateX(-3rem) skewX(12deg);
 
     -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(
-      50% at 50% 50%
-    ); // element need to float have set width and height
+    shape-outside: circle(50% at 50% 50%);
+    // element need to float, have set width and height
 
     -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%); // element need to float have set width and height
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  &__text {
+    transform: skew(12deg);
   }
 
   &__img {
