@@ -22,6 +22,8 @@
 
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
+
+    position: relative;
   }
 
   &__text {
@@ -30,5 +32,31 @@
 
   &__img {
     height: 100%;
+    transform: translateX(-3.5rem) scale(1.4);
+    backface-visibility: hidden; // without this line img shrink cuz of transition no one no why this line fix
+    transition: all 0.5s;
+  }
+
+  &__caption {
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: all 0.5s;
+    text-transform: uppercase;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-3.5rem) scale(1);
+    filter: blur(3px) brightness(80%);
   }
 }
