@@ -35,9 +35,37 @@
 .section-form {
   // background-color: $color-gray-light-1;
   padding: 15rem 0 15rem 0;
+  background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+}
+
+.section-book {
+  padding: 15rem 0;
   background-image: linear-gradient(
     to right bottom,
-    $color-primary,
+    $color-primary-light,
     $color-primary-dark
   );
+}
+
+.book {
+  // -------------------------------------------
+  background-image: linear-gradient(105deg,
+      rgba($color-white, 0.5) 0,
+      rgba($color-white, 0.5) 50%,
+      transparent 50%
+    ),
+    url('../img/nat-10.jpg');
+  // -- default "to right bottom " so 90deg will be left to right
+  // - 105 deg make it look like clip path
+  // -- transparent is ligit css color
+  // -------------------------------------------
+  background-size: 100%;
+  height: 500px;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+    height: 100px;
+    @include opaque-bg;
+  }
 }
