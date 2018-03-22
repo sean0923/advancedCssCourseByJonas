@@ -17,9 +17,15 @@ $color-white-gray: #eee;
 $color-gray-light-1: #f7f7f7;
 $color-gray-light-2: #eee;
 
-$color-gray-dark: #777;
+$color-gray-dark-1: #777;
+$color-gray-dark-2: #999;
 
 $color-black: #000;
+
+// box-shadow-color
+$color-box-shadow-light: rgba($color-black, 0.1);
+$color-box-shadow: rgba($color-black, 0.2);
+$color-box-shadow-dark: rgba($color-black, 0.5);
 
 // fontSize
 $default-font-size: 1.6rem;

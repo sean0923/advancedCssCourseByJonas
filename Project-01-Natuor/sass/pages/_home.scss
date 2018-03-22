@@ -50,8 +50,8 @@
 .book {
   // -------------------------------------------
   background-image: linear-gradient(105deg,
-      rgba($color-white, 0.5) 0,
-      rgba($color-white, 0.5) 50%,
+      rgba($color-white, 0.8) 0,
+      rgba($color-white, 0.8) 50%,
       transparent 50%
     ),
     url('../img/nat-10.jpg');
@@ -66,6 +66,6 @@
     width: 50%;
     padding: 6rem;
     height: 100px;
-    @include opaque-bg;
+    // @include opaque-bg;
   }
 }
