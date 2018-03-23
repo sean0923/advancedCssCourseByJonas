@@ -52,4 +52,53 @@
     visibility: hidden; // so that element does not exist in the DOM
     transform: translateY(-4rem);
   }
+
+  &__radio-group {
+    display: inline-block;
+    position: relative;
+    width: 45%; // 50 did no work so 49 is close enought to make half
+  }
+
+  &__radio-input {
+    display: none;
+    // visibility: hidden; // so that element does not exist in the DOM
+  }
+
+  &__radio-button {
+    border-radius: 50%;
+    border: 5px solid $color-primary;
+    cursor: pointer;
+    display: inline-block;
+    height: 3rem;
+    position: absolute;
+    transform: translate(0, -.2rem);
+    width: 3rem;
+
+    &::after {
+      border-radius: 50%;
+      background-color: $color-primary;
+      content: "";
+      display: inline-block;
+      height: 1.3rem;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.3rem;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+
+  &__radio-label {
+    &__text {
+      cursor: pointer;
+      display: inline-block;
+      transform: translateX(4rem);
+    }
+  }
+  
 }
