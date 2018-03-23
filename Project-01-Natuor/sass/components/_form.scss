@@ -24,6 +24,10 @@
       padding: 1.5rem 2rem; // larger left right padding looks better than uniform padding for input
     }
 
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
     &::-webkit-input-placeholder {
       // only chrome and fire ?
       // you can style only placeholder
@@ -40,7 +44,8 @@
     transition: all .3s; // for opacity 0 to 1
   }
 
-  &__input:placeholder-shown + &__label { // ajacent sibiling selector !! must be later
+  &__input:placeholder-shown + &__label {
+    // ajacent sibiling selector !! must be later
     // placeholder-shown means nothing has been typed yet
     opacity: 0; // visibility hidden cannot be animated
     visibility: hidden; // so that element does not exist in the DOM
