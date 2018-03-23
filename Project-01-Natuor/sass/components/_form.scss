@@ -15,7 +15,7 @@
     font-family: inherit; // form has it's own font-family so need to specify inherit
     padding: 1.5rem 2rem; // larger lr padding looks better than uniform padding for input
     width: 90%;
-    
+
     &:focus {
       border: none;
       border-bottom: 3px solid $color-primary;
@@ -23,8 +23,9 @@
       outline: none; // should consider keyboard tab user by adding box-shadow
       padding: 1.5rem 2rem; // larger left right padding looks better than uniform padding for input
     }
-    
-    &::-webkit-input-placeholder { // only chrome and fire ?
+
+    &::-webkit-input-placeholder {
+      // only chrome and fire ?
       // you can style only placeholder
       color: $color-gray-dark-2;
     }
@@ -36,6 +37,13 @@
     font-weight: 700;
     margin-left: 2rem;
     margin-top: .7rem;
+    transition: all .3s; // for opacity 0 to 1
+  }
 
+  &__input:placeholder-shown + &__label { // ajacent sibiling selector !! must be later
+    // placeholder-shown means nothing has been typed yet
+    opacity: 0; // visibility hidden cannot be animated
+    visibility: hidden; // so that element does not exist in the DOM
+    transform: translateY(-4rem);
   }
 }
