@@ -1,28 +1,58 @@
 .footer {
   background-color: $color-gray-dark-3;
+  padding: 10rem 0;
+
+  &__logo-box {
+    text-align: center; // img tag can be horizontally centered by this line // cuz it is inline element
+    margin-bottom: 8rem;
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
 
   &__navigation {
-
+    border-top: 1px solid $color-gray-dark-1;
+    display: inline-block; // so that border top can end at the right place
   }
 
   &__ul {
-
+    margin-top: 2rem;
   }
 
   &__li {
     display: inline-block;
-    // display: block;
-    // text-decoration: none;
-    
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
   }
 
   &__link {
-    color: $color-gray-light-2;
-    text-decoration: none;
+    font-size: 1.4rem;
 
-    &:hover {
+    &:visited,
+    &:link {
+      color: $color-gray-light-1; // plain white on dark background looks bad!
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    &:hover,
+    &:active {
       color: $color-primary;
-      font-size: $default-font-size;
+    }
+  }
+
+  &__copyright-box {
+    border-top: 1px solid $color-gray-dark-1;
+    float: right;
+    width: 90%;
+  }
+
+  &__copyright {
+    &:not(:last-child) {
+      margin-top: 2rem;
     }
   }
 }
