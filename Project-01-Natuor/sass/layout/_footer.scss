@@ -1,0 +1,28 @@
+.footer {
+  background-color: $color-gray-dark-3;
+
+  &__navigation {
+
+  }
+
+  &__ul {
+
+  }
+
+  &__li {
+    display: inline-block;
+    // display: block;
+    // text-decoration: none;
+    
+  }
+
+  &__link {
+    color: $color-gray-light-2;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
+      font-size: $default-font-size;
+    }
+  }
+}
