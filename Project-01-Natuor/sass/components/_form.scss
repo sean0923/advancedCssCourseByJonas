@@ -15,7 +15,8 @@
     font-family: inherit; // form has it's own font-family so need to specify inherit
     padding: 1.5rem 2rem; // larger lr padding looks better than uniform padding for input
     width: 90%;
-    
+    transition: all .3s;
+
     &:focus {
       border: none;
       border-bottom: 3px solid $color-primary;
@@ -23,8 +24,13 @@
       outline: none; // should consider keyboard tab user by adding box-shadow
       padding: 1.5rem 2rem; // larger left right padding looks better than uniform padding for input
     }
-    
-    &::-webkit-input-placeholder { // only chrome and fire ?
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      // only chrome and fire ?
       // you can style only placeholder
       color: $color-gray-dark-2;
     }
@@ -36,6 +42,71 @@
     font-weight: 700;
     margin-left: 2rem;
     margin-top: .7rem;
+    transition: all .3s; // for opacity 0 to 1
+  }
 
+  &__input:placeholder-shown + &__label {
+    // ajacent sibiling selector !! must be later
+    // placeholder-shown means nothing has been typed yet
+    opacity: 0; // visibility hidden cannot be animated
+    visibility: hidden; // so that element does not exist in the DOM
+    transform: translateY(-4rem);
+  }
+
+  &__radio-group {
+    display: inline-block;
+    position: relative;
+    width: 45%; // 50 did no work so 49 is close enought to make half
+  }
+
+  &__radio-input {
+    // display: none;
+
+    // visibility: hidden; // so that element does not exist in the DOM
+    opacity: 0;
+    // &:focus {
+    //   opacity: 1;
+    // }
+  }
+
+  &__radio-button {
+    border-radius: 50%;
+    border: 5px solid $color-primary;
+    cursor: pointer;
+    display: inline-block;
+    height: 3rem;
+    position: absolute;
+    transform: translate(-1rem, -.2rem);
+    width: 3rem;
+
+    &::after {
+      border-radius: 50%;
+      background-color: $color-primary;
+      content: "";
+      display: inline-block;
+      height: 1.3rem;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.3rem;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+
+  &__radio-input:focus ~ &__radio-label &__radio-button {
+    box-shadow: 0 .1rem 1rem $color-box-shadow-dark;
+  }
+
+  &__radio-label {
+    &__text {
+      cursor: pointer;
+      display: inline-block;
+      transform: translateX(3rem);
+    }
   }
 }
