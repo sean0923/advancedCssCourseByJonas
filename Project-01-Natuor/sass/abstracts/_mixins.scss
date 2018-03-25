@@ -6,7 +6,17 @@
   }
 }
 
+@mixin opaque-red-bg {
+  background-color: rgba(orangered, 0.5);
+}
 
-@mixin opaque-bg {
-  background-color: rgba($color-white, 0.5);
+@mixin opaque-green-bg {
+  background-color: rgba(green, 0.5);
+}
+
+@mixin absolute-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
