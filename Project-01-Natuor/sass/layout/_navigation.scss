@@ -1,8 +1,7 @@
 .navigation {
   position: relative;
 
-  &__background-wrapper {
-    @include test-box;
+  &__background {
     background-color: $color-primary;
     position: fixed;
     right: 5rem;
@@ -11,24 +10,40 @@
   }
 
   &__nav {
-    @include test-box;
-
     height: 100vh;  
     width: 100vw;
     top: 0rem;
     right: 0rem;
 
-    // background-color: $color-secondary-dark;
     position: fixed;
     z-index: 2000;
   }
 
-  &__checkbox-wrapper {
-    @include test-box;
+  &__checkbox-label {
     background-color: $color-white;
     position: fixed;
     top: 7rem;
     right: 7rem;
     z-index: 3000;
   }
+
+  &__list {
+    @include absolute-center;
+    top: 45%;
+  }
+
+  &__item {
+    display: block;
+  }
+  
+  &__link {
+    color: $color-white;
+    font-size: 3rem;
+    text-decoration: none;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(100);
+  }
+
 }
