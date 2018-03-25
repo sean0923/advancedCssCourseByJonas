@@ -2,28 +2,36 @@
   position: relative;
 
   &__background {
-    background-color: $color-primary;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    border-radius: 50%;
+    height: $nav-btn-diameter;
     position: fixed;
-    right: 5rem;
-    top: 5rem;
+    right: 7rem;
+    top: 7rem;
+    transition: all .2s;
+    width: $nav-btn-diameter;
     z-index: 1000;
   }
 
   &__nav {
-    height: 100vh;  
+    height: 100vh;
     width: 100vw;
     top: 0rem;
     right: 0rem;
-
     position: fixed;
+    visibility: hidden;
     z-index: 2000;
   }
 
   &__checkbox-label {
     background-color: $color-white;
+    border-radius: 50%;
+    cursor: pointer;
+    height: $nav-btn-diameter;
     position: fixed;
-    top: 7rem;
     right: 7rem;
+    top: 7rem;
+    width: $nav-btn-diameter;
     z-index: 3000;
   }
 
@@ -35,7 +43,7 @@
   &__item {
     display: block;
   }
-  
+
   &__link {
     color: $color-white;
     font-size: 3rem;
@@ -43,7 +51,10 @@
   }
 
   &__checkbox:checked ~ &__background {
-    transform: scale(100);
+    transform: scale(45);
   }
 
+  &__checkbox:checked ~ &__nav {
+    visibility: visible;
+  }
 }
