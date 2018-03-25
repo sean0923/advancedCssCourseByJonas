@@ -6,8 +6,17 @@
   }
 }
 
+@mixin test-box {
+  background-color: rgba(orangered, 0.2);
+  border: 1px solid orange;
+  height: 10rem;
+  width: 10rem;
+  display: inline-block;
+
+}
+
 @mixin opaque-red-bg {
-  background-color: rgba(orangered, 0.5);
+  background-color: rgba(orangered, 0.2);
 }
 
 @mixin opaque-green-bg {
