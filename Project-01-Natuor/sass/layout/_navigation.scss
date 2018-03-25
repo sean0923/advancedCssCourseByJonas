@@ -1,0 +1,42 @@
+.navigation {
+  position: relative;
+
+  &__checkbox {
+    visibility: hidden;
+  }
+
+  &__checkbox:checked ~ &__background-circle {
+    transform: scale(200);
+  }
+
+  &__btn-group {
+    height: 2rem;
+    position: fixed;
+    right: 7rem;
+    top: 7rem;
+    width: 2rem;
+    z-index: 1000;
+  }
+
+  &__toggle-btn {
+    @include absolute-center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 4rem $color-box-shadow;
+    cursor: pointer;
+    display: inline-block;
+    height: $nav-btn-diameter;
+    width: $nav-btn-diameter;
+    z-index: 3000;
+  }
+
+  &__background-circle {
+    @include absolute-center;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    border-radius: 50%;
+    height: 2rem;
+    transition: all .3s;
+    width: 2rem;
+    z-index: 2000;
+  }
+}
