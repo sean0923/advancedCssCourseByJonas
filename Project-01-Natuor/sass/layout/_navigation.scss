@@ -11,6 +11,8 @@
     transition: all .2s;
     width: $nav-btn-diameter;
     z-index: 1000;
+    //
+    transform: scale(45);
   }
 
   &__nav {
@@ -19,7 +21,7 @@
     top: 0rem;
     right: 0rem;
     position: fixed;
-    visibility: hidden;
+    // visibility: hidden;
     z-index: 2000;
   }
 
@@ -37,17 +39,40 @@
 
   &__list {
     @include absolute-center;
+    list-style: none; // remove bullet points
+    text-align: center;
     top: 45%;
   }
 
   &__item {
-    display: block;
+    margin: 1rem;
   }
 
   &__link {
-    color: $color-white;
-    font-size: 3rem;
-    text-decoration: none;
+    &:link,
+    &:visited {
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 220%;
+      color: $color-white;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+    }
+
   }
 
   &__checkbox:checked ~ &__background {
