@@ -40,6 +40,10 @@
     column-gap: 4rem; // 1rem = 14px cuz we set font-size here
     column-rule: 1px solid $color-gray-light-2; // divider btw 2 columns
     font-size: 1.4rem;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     margin-bottom: 4rem;
   }
 }
