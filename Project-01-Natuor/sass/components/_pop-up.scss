@@ -2,10 +2,18 @@
   background-color: rgba($color-black, .8);
   height: 100vh;
   left: 0;
+  opacity: 0; // for animation !
   position: fixed;
   top: 0;
+  transition: all .2s;
+  visibility: hidden;
   width: 100vw;
   z-index: 5000;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__content {
     @include absolute-center;
