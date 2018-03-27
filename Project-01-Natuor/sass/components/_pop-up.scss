@@ -9,10 +9,29 @@
 
   &__content {
     @include absolute-center;
-    @include opaque-green-bg;
     background-color: $color-white;
-    height: 500px;
+    border-radius: 3px;
+    box-shadow: 0 1rem 3rem $color-box-shadow;
+    display: table;
     width: 75%;
     z-index: 6000;
   }
+
+  &__left {
+    display: table-cell;
+    width: 33.333333333%;
+  }
+
+  &__right {
+    display: table-cell; // so that left and right can have same height
+    vertical-align: middle; // available when you use table cell
+    width: 66.666666666%;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+
 }
