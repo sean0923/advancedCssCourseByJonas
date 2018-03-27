@@ -1,0 +1,18 @@
+.pop-up {
+  background-color: rgba($color-black, .5);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 5000;
+
+  &__content {
+    @include absolute-center;
+    @include opaque-green-bg;
+    background-color: $color-white;
+    height: 500px;
+    width: 75%;
+    z-index: 6000;
+  }
+}
