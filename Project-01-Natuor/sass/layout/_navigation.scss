@@ -11,23 +11,24 @@
     transition: all .2s;
     width: $nav-btn-diameter;
     z-index: 1000;
-    //
-    transform: scale(45);
   }
 
   &__nav {
     height: 100vh;
-    width: 100vw;
-    top: 0rem;
-    right: 0rem;
+    opacity: 0; // for animation
     position: fixed;
+    right: 0rem;
+    top: 0rem;
     // visibility: hidden;
+    // width: 100vw;
+    width: 0; // to not able to click
     z-index: 2000;
   }
 
   &__checkbox-label {
     background-color: $color-white;
     border-radius: 50%;
+    box-shadow: 0 1rem 3rem $color-box-shadow-light;
     cursor: pointer;
     height: $nav-btn-diameter;
     position: fixed;
@@ -66,7 +67,7 @@
       text-decoration: none;
       text-transform: uppercase;
       transition: all .4s;
-      
+
       span {
         margin-right: 1rem;
         display: inline-block;
@@ -78,7 +79,52 @@
       background-position: 100%;
       color: $color-primary;
     }
+  }
 
+  &__icon {
+    position: relative;
+
+    &-1,
+    &-2,
+    &-3 {
+      @include absolute-center;
+      background-color: $color-gray-dark-3;
+      display: inline-block;
+      height: 3px;
+      position: absolute;
+      transition: transform .2s;
+      width: 50%;
+    }
+
+    &-1 {
+      top: calc(50% - .8rem);
+    }
+
+    &-3 {
+      top: calc(50% + .8rem);
+    }
+  }
+
+  &__checkbox-label:hover &__icon-1 {
+    top: calc(50% - 1rem);
+  }
+
+  &__checkbox-label:hover &__icon-3 {
+    top: calc(50% + 1rem);
+  }
+
+  &__checkbox:checked + &__checkbox-label &__icon-1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+
+  &__checkbox:checked+&__checkbox-label &__icon-2 {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__checkbox-label &__icon-3 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
   }
 
   &__checkbox:checked ~ &__background {
@@ -86,6 +132,7 @@
   }
 
   &__checkbox:checked ~ &__nav {
-    visibility: visible;
+    opacity: 1;
+    width: 100vw;
   }
 }
