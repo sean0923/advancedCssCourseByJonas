@@ -8,7 +8,7 @@
 
 html {
   @include respond(big-desktop) {
-    font-size: 75%; // 1rem = 12px; 12/16 = 75% ---> above 1800px
+    font-size: 75%; // 1rem = 12px; 12/16 = 75% ---> > 1800px
     background: rgba(pink, .5);
   }
 
@@ -16,21 +16,25 @@ html {
   background: rgba(purple, .5);
 
   @include respond(tab-land) {
-    font-size: 56.25%; // 1rem = 9px; 8/16 = 56.25% ---> 1200px
+    font-size: 56.25%; // 1rem = 9px; 8/16 = 56.25% ---> < 1200px
     background: rgba(blue, .5);
   }
 
   @include respond(tab-port) {
-    font-size: 50%; // 1rem = 8px; 8/16 = 50% ---> 900px
+    font-size: 50%; // 1rem = 8px; 8/16 = 50% ---> < 900px
     background: rgba(green, .5);
   }
 
   @include respond(phone) {
-    font-size: 37.5%; // 1rem = 6px; 6/16 = 37.5% ---> 600px
+    font-size: 37.5%; // 1rem = 6px; 6/16 = 37.5% ---> < 600px
     background: rgba(red, .5);
   }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0rem;
+  }
 }
