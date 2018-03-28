@@ -10,7 +10,13 @@ body {
   color: $color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
+
   &--main {
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -19,7 +25,11 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
   }
+
   &--sub {
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -31,6 +41,12 @@ body {
 }
 
 .heading-secondary {
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -60,4 +76,3 @@ body {
     margin-bottom: 3rem;
   }
 }
-
