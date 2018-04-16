@@ -5,6 +5,7 @@ import Header from './components/layout/Header';
 
 import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
+import Page1 from './components/Page1'
 
 class ReactRouter extends Component {
   // ---------------------------------------------------------------------------------------
@@ -19,6 +20,7 @@ class ReactRouter extends Component {
             <Sidebar />
 
             <Switch>
+              <Route path={'/page-1'} component={Page1} />
               <Route path={'/'} component={Home} />
             </Switch>
           </div>
