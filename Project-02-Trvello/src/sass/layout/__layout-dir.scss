@@ -1,2 +1,19 @@
-@import "header";
-@import "navigation";
+.container {
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--box-shawdow-1);
+  margin: 8rem auto;
+  max-width: 120rem;
+  min-height: 50rem;
+}
+
+.header {
+}
+
+.content {
+}
+
+.sidebar {
+}
+
+.hotel-view {
+}
