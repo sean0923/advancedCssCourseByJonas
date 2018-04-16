@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-light-1);
   box-shadow: var(--box-shawdow-1);
   margin: 8rem auto;
   max-width: 120rem;
@@ -7,13 +7,21 @@
 }
 
 .header {
+  height: 7rem;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  background-color: var(--color-white);
 }
 
 .content {
+  display: flex;
 }
 
 .sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%; // grow shrink base
 }
 
 .hotel-view {
+  background-color: green;
+  flex: 1; // grow // should user short hand like this
 }
