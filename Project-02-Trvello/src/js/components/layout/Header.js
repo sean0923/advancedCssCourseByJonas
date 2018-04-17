@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SvgIcon from '../SvgIcon';
 
 import logo from '../../../../assets/logo.png';
+import user from '../../../../assets/user.jpg';
 
 import * as Styled from './Header.styles';
 
@@ -13,8 +14,32 @@ const StyledSvgIcon = styled(SvgIcon)`
 `;
 
 export default class Header extends Component {
-  renderIconBox() {
-    return <Styled.iconBox>iconBox</Styled.iconBox>;
+  renderSvgIcons() {
+    return (
+      <Styled.svgIconsBox>
+        {['bookmark', 'chat'].map(name => {
+          return <StyledSvgIcon key={name} icon={name} />;
+        })}
+      </Styled.svgIconsBox>
+    );
+  }
+
+  renderProfileBox() {
+    return (
+      <Styled.profileBox>
+        <Styled.img src={user} alt="user" />
+        Not Sean
+      </Styled.profileBox>
+    );
+  }
+
+  renderRightHeader() {
+    return (
+      <Styled.rightHeaderBox>
+        {this.renderSvgIcons()}
+        {this.renderProfileBox()}
+      </Styled.rightHeaderBox>
+    );
   }
 
   renderInputBox() {
@@ -30,13 +55,13 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="header">
+      <Styled.header>
         <Styled.flex>
           <Styled.img src={logo} alt="logo" />
           {this.renderInputBox()}
-          {this.renderIconBox()}
+          {this.renderRightHeader()}
         </Styled.flex>
-      </div>
+      </Styled.header>
     );
   }
 }

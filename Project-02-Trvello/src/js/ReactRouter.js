@@ -5,7 +5,7 @@ import Header from './components/layout/Header';
 
 import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
-import Page1 from './components/Page1'
+import Page1 from './components/Page1';
 
 class ReactRouter extends Component {
   // ---------------------------------------------------------------------------------------
@@ -14,9 +14,11 @@ class ReactRouter extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
+        {/* <div className="container"> */}
+        <div>
           <Header />
-          <div className="content">
+          {/* <div className="content"> */}
+          <div>
             <Sidebar />
 
             <Switch>
