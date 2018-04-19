@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import SvgIcon from './SvgIcon';
 
 export default class Home extends Component {
   render() {
