@@ -59,11 +59,6 @@ const SearchBtn = styled.button`
   }
 `;
 
-// const FlexWrapper = styled.form`
-//   display: flex;
-//   padding: 2rem;
-// `;
-
 const StyledSvgIcon = styled(SvgIcon)`
   width: var(--height-width-svg);
   height: var(--height-width-svg);
