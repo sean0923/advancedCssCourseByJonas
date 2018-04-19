@@ -9,7 +9,7 @@ import SvgIcon from '../SvgIcon';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import User Img ------------------------------------
 // -----------------------------------------------------------------------------------------
-import user from '../../../../assets/user.jpg';
+import userImg from '../../../../assets/user.jpg';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
@@ -19,20 +19,23 @@ const StyledSvgIcon = styled(SvgIcon)`
   height: 3rem;
 `;
 
+const UserImg = styled.img`
+  height: 5rem;
+  border-radius: 50%;
+`;
+
 export default class Header__RightBox extends Component {
   // ---------------------------------------------------------------------------------------
   // ------------------------------------ Render -------------------------------------------
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <div>
-        <div>
+      <div className="temp">
+        <div className="temp">
           {['bookmark', 'chat'].map(name => {
             return <StyledSvgIcon key={name} icon={name} />;
           })}
-        </div>
-        <div>
-          <div src={user} alt="user" />
+          <UserImg src={userImg} alt="user" />
           <div>Not Sean</div>
         </div>
       </div>

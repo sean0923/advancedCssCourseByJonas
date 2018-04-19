@@ -10,20 +10,27 @@ import Header__RightBox from './Header__RightBox';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Imgs ----------------------------------------
 // -----------------------------------------------------------------------------------------
-import logo from '../../../../assets/logo.png';
+import logoImg from '../../../../assets/logo.png';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
+const FlexWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const LogoImg = styled.img`height: 5rem;`;
 
 export default class Header extends Component {
   render() {
     return (
-      <div>
-        <div src={logo} alt="logo" />
+      <FlexWrapper className="temp">
+        <LogoImg className="temp" src={logoImg} alt="logo" />
         <Header__MidBox />
         <Header__RightBox />
-      </div>
+      </FlexWrapper>
     );
   }
 }
