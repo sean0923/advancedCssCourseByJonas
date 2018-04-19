@@ -27,8 +27,7 @@ const Input = styled.input`
   background: var(--color-grey-light-2);
   border: none;
   padding: .7rem 2rem;
-  width: 90%;
-  /* height: 1rem; */
+  width: 95%;
   border-radius: 9999px; /* any big num to make both side round */
   transition: all .2s;
   margin-right: -4.5rem; /* push item on right to move left */
@@ -38,14 +37,21 @@ const Input = styled.input`
     width: 100%;
     background: var(--color-grey-light-3);
   }
+
+  &::-webkit-input-placeholder {
+    font-weight: 100;
+    color: var(--color-grey-light-4);
+  }
 `;
 
 const SearchBtn = styled.button`
   border: none;
   background: transparent;
+  fill: var(--color-grey-dark-3);
 
   &:focus {
     outline: none;
+    fill: var(--color-grey-dark-1);
   }
 
   &:active {
@@ -69,7 +75,7 @@ export default class Header__MidBox extends Component {
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <FlexItemWrapper className="temp">
+      <FlexItemWrapper >
         <Input type="text" placeholder="Search hotels" />
         <SearchBtn>
           <StyledSvgIcon icon="magnifying-glass" />

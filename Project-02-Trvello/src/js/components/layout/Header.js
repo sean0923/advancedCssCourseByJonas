@@ -15,13 +15,17 @@ import logoImg from '../../../../assets/logo.png';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
-const FlexWrapper = styled.div`
+const WrapperHeader = styled.div`
+  height: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-const LogoImg = styled.img`height: 5rem;`;
+const LogoImg = styled.img`
+  margin-left: 2rem;
+  height: 3rem;
+`;
 
 export default class Header extends Component {
   // ---------------------------------------------------------------------------------------
@@ -29,11 +33,11 @@ export default class Header extends Component {
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <FlexWrapper className="temp">
-        <LogoImg className="temp" src={logoImg} alt="logo" />
+      <WrapperHeader >
+        <LogoImg  src={logoImg} alt="logo" />
         <Header__MidBox />
         <Header__RightBox />
-      </FlexWrapper>
+      </WrapperHeader>
     );
   }
 }
