@@ -24,6 +24,9 @@ const FlexWrapper = styled.div`
 const LogoImg = styled.img`height: 5rem;`;
 
 export default class Header extends Component {
+  // ---------------------------------------------------------------------------------------
+  // ------------------------------------ Render -------------------------------------------
+  // ---------------------------------------------------------------------------------------
   render() {
     return (
       <FlexWrapper className="temp">

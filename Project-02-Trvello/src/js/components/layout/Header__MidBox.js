@@ -9,9 +9,58 @@ import SvgIcon from '../SvgIcon';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
+const FlexItemWrapper = styled.form`
+  font-size: 1.4rem;
+
+  /* parenet is display: flex */
+  flex: 0 0 40%; /* flex: grow | shrink | how long of parent ? */
+  /* flex item can be flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Input = styled.input`
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: var(--color-grey-light-2);
+  border: none;
+  padding: .7rem 2rem;
+  width: 90%;
+  /* height: 1rem; */
+  border-radius: 9999px; /* any big num to make both side round */
+  transition: all .2s;
+  margin-right: -4.5rem; /* push item on right to move left */
+
+  &:focus {
+    outline: none;
+    width: 100%;
+    background: var(--color-grey-light-3);
+  }
+`;
+
+const SearchBtn = styled.button`
+  border: none;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+`;
+
+// const FlexWrapper = styled.form`
+//   display: flex;
+//   padding: 2rem;
+// `;
+
 const StyledSvgIcon = styled(SvgIcon)`
-  width: 3rem;
-  height: 3rem;
+  width: var(--height-width-svg);
+  height: var(--height-width-svg);
 `;
 
 export default class Header__MidBox extends Component {
@@ -20,12 +69,12 @@ export default class Header__MidBox extends Component {
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <div className="temp">
-        <form action="#">
-          <input type="text" />
+      <FlexItemWrapper className="temp">
+        <Input type="text" placeholder="Search hotels" />
+        <SearchBtn>
           <StyledSvgIcon icon="magnifying-glass" />
-        </form>
-      </div>
+        </SearchBtn>
+      </FlexItemWrapper>
     );
   }
 }
