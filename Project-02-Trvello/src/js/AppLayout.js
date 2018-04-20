@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // ------------------------------------ Import Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 import Header from './components/layout/Header';
-import Sidebar from './components/layout/Sidebar';
+import Navbar from './components/layout/Navbar';
 import Routes from './Routes';
 
 // -----------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ class ReactRouter extends Component {
         <Wrapper>
           <Header />
           <SidebarAndRoutes>
-            <Sidebar />
+            <Navbar />
             <Routes />
           </SidebarAndRoutes>
         </Wrapper>

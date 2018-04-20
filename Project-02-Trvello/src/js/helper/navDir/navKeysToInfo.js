@@ -9,17 +9,17 @@ import TourView from '../../components/pages/TourView';
 // -----------------------------------------------------------------------------------------
 // -------------------------------- Route Keys ---------------------------------------------
 // -----------------------------------------------------------------------------------------
-import { KEY_HOTEL, KEY_FLIGHT, KEY_CAR_RENTAL, KEY_TOUR } from './routeKeys';
+import { KEY_HOTEL, KEY_FLIGHT, KEY_CAR_RENTAL, KEY_TOUR } from './navKeys';
 
 // -----------------------------------------------------------------------------------------
 // -------------------------------- Links --------------------------------------------------
 // -----------------------------------------------------------------------------------------
-import { LINK_HOTEL, LINK_FLIGHT, LINK_CAR_RENTAL, LINK_TOUR } from './routeLinks';
+import { LINK_HOTEL, LINK_FLIGHT, LINK_CAR_RENTAL, LINK_TOUR } from './navLinks';
 
 // -----------------------------------------------------------------------------------------
 // -------------------------------- Constants ----------------------------------------------
 // -----------------------------------------------------------------------------------------
-import { LINK, COMPONENT_NAME, ICON_NAME, TEXT } from './routeConstants';
+import { LINK, COMPONENT_NAME, ICON_NAME, TEXT } from './navConstants';
 
 const ICON_NAME_HOTEL = 'home';
 const ICON_NAME_FLIGHT = 'aircraft-take-off';

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Components ----------------------------------
@@ -9,50 +10,66 @@ import SvgIcon from '../sharedComponents/SvgIcon';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Route Constants ------------------------------------
 // -----------------------------------------------------------------------------------------
-import { ICON_NAME, TEXT } from '../../helper/routesDir/routeConstants';
+import { ICON_NAME, TEXT, LINK } from '../../helper/navDir/navConstants';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Route Keys ------------------------------------
 // -----------------------------------------------------------------------------------------
-import { KEY_HOTEL, KEY_FLIGHT, KEY_CAR_RENTAL, KEY_TOUR } from '../../helper/routesDir/routeKeys';
+import { KEY_HOTEL, KEY_FLIGHT, KEY_CAR_RENTAL, KEY_TOUR } from '../../helper/navDir/navKeys';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Route Keys to Info ---------------------------------
 // -----------------------------------------------------------------------------------------
-import routeKeysToInfo from '../../helper/routesDir/routeKeysToInfo';
+import navKeysToInfo from '../../helper/navDir/navKeysToInfo';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Navbar Items ---------------------------------------
 // -----------------------------------------------------------------------------------------
-const sidebarItems = [
-  { text: routeKeysToInfo[KEY_HOTEL][TEXT], icon: routeKeysToInfo[KEY_HOTEL][ICON_NAME] },
-  { text: routeKeysToInfo[KEY_FLIGHT][TEXT], icon: routeKeysToInfo[KEY_FLIGHT][ICON_NAME] },
-  { text: routeKeysToInfo[KEY_CAR_RENTAL][TEXT], icon: routeKeysToInfo[KEY_CAR_RENTAL][ICON_NAME] },
-  { text: routeKeysToInfo[KEY_TOUR][TEXT], icon: routeKeysToInfo[KEY_TOUR][ICON_NAME] },
+const navbarItems = [
+  {
+    text: navKeysToInfo[KEY_HOTEL][TEXT],
+    icon: navKeysToInfo[KEY_HOTEL][ICON_NAME],
+    link: navKeysToInfo[KEY_HOTEL][LINK],
+  },
+  {
+    text: navKeysToInfo[KEY_FLIGHT][TEXT],
+    icon: navKeysToInfo[KEY_FLIGHT][ICON_NAME],
+    link: navKeysToInfo[KEY_FLIGHT][LINK],
+  },
+  {
+    text: navKeysToInfo[KEY_CAR_RENTAL][TEXT],
+    icon: navKeysToInfo[KEY_CAR_RENTAL][ICON_NAME],
+    link: navKeysToInfo[KEY_CAR_RENTAL][LINK],
+  },
+  {
+    text: navKeysToInfo[KEY_TOUR][TEXT],
+    icon: navKeysToInfo[KEY_TOUR][ICON_NAME],
+    link: navKeysToInfo[KEY_TOUR][LINK],
+  },
 ];
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 const StyledSvgIcon = styled(SvgIcon)`
-  height: var(--size-svg-at-sidebar) ;
-  width: var(--size-svg-at-sidebar) ;
+  height: var(--size-svg-at-navbar) ;
+  width: var(--size-svg-at-navbar) ;
 `;
 
-export default class Sidebar extends Component {
+export default class Navbar extends Component {
   // ---------------------------------------------------------------------------------------
   // ---------------------------------- Render ---------------------------------------------
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <div className="sidebar">
+      <div className="navbar">
         <div>
-          {sidebarItems.map(item => {
+          {navbarItems.map(item => {
             return (
-              <div key={item.text}>
+              <Link key={item.text} className="navbar-link" to={item.link}>
                 <StyledSvgIcon icon={item.icon} />
                 <div>{item.text}</div>
-              </div>
+              </Link>
             );
           })}
         </div>
