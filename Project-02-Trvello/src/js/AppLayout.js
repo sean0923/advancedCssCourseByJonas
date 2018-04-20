@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
 // -----------------------------------------------------------------------------------------
@@ -7,8 +7,7 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
-import Home from './components/Home';
-import Page1 from './components/Page1';
+import Routes from './Routes';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
@@ -21,7 +20,7 @@ const Wrapper = styled.div`
   min-height: 50rem;
 `;
 
-const SidebarAndHome = styled.div`display: flex;`;
+const SidebarAndRoutes = styled.div`display: flex;`;
 
 class ReactRouter extends Component {
   // ---------------------------------------------------------------------------------------
@@ -32,13 +31,10 @@ class ReactRouter extends Component {
       <BrowserRouter>
         <Wrapper>
           <Header />
-          <SidebarAndHome>
+          <SidebarAndRoutes>
             <Sidebar />
-            <Switch>
-              <Route path="/page-1" component={Page1} />
-              <Route path="/" component={Home} />
-            </Switch>
-          </SidebarAndHome>
+            <Routes />
+          </SidebarAndRoutes>
         </Wrapper>
       </BrowserRouter>
     );

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Components ----------------------------------
 // -----------------------------------------------------------------------------------------
-import Header__MidBox from './Header__MidBox';
-import Header__RightBox from './Header__RightBox';
+import Header__MidBox from './HeaderDir/Header__MidBox';
+import Header__RightBox from './HeaderDir/Header__RightBox';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Imgs ----------------------------------------
@@ -33,8 +33,8 @@ export default class Header extends Component {
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <WrapperHeader >
-        <LogoImg  src={logoImg} alt="logo" />
+      <WrapperHeader>
+        <LogoImg src={logoImg} alt="logo" />
         <Header__MidBox />
         <Header__RightBox />
       </WrapperHeader>

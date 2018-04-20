@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Components ----------------------------------
 // -----------------------------------------------------------------------------------------
-import SvgIcon from '../SvgIcon';
+import SvgIcon from '../../sharedComponents/SvgIcon';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
@@ -70,7 +70,7 @@ export default class Header__MidBox extends Component {
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <FlexItemWrapper >
+      <FlexItemWrapper>
         <Input type="text" placeholder="Search hotels" />
         <SearchBtn>
           <StyledSvgIcon icon="magnifying-glass" />

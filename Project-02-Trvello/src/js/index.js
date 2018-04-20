@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import ReactRouter from './ReactRouter';
+import AppLayout from './AppLayout';
 
-render(<ReactRouter />, document.getElementById('app'));
+render(<AppLayout />, document.getElementById('app'));
