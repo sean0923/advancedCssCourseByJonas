@@ -5,15 +5,14 @@ import styled from 'styled-components';
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 
-
-export default class HotelView extends Component {
+export default class CarRentalView extends Component {
   // ---------------------------------------------------------------------------------------
   // ------------------------------------ Render -------------------------------------------
   // ---------------------------------------------------------------------------------------
   render() {
     return (
       <div className="hotel-view-temp">
-        <div>Hotel View</div>
+        <div>CarRentalView</div>
       </div>
     );
   }

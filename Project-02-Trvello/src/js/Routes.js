@@ -2,36 +2,19 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 // -----------------------------------------------------------------------------------------
-// ------------------------------- Import Components ---------------------------------------
+// -------------------------------- Route Keys ---------------------------------------------
 // -----------------------------------------------------------------------------------------
-import HotelView from './components/pages/HotelView';
-import TestPage00 from './components/pages/TestPage00';
-
-// -----------------------------------------------------------------------------------------
-// -------------------------------- Route Names --------------------------------------------
-// -----------------------------------------------------------------------------------------
-const NAME_HOTEL_VIEW = 'HOTEL_VIEW';
-const NAME_TEST_PAGE_00 = 'TEST_PAGE_00';
-
-// -----------------------------------------------------------------------------------------
-// -------------------------------- Links --------------------------------------------------
-// -----------------------------------------------------------------------------------------
-const LINK_HOTEL_VIEW = '/';
-const LINK_TEST_PAGE_00 = '/test-page-00';
+import { KEY_HOTEL, KEY_FLIGHT, KEY_CAR_RENTAL, KEY_TOUR } from './helper/routesDir/routeKeys';
 
 // -----------------------------------------------------------------------------------------
 // -------------------------------- Constants ----------------------------------------------
 // -----------------------------------------------------------------------------------------
-const LINK = 'LINK';
-const COMPONENT_NAME = 'COMPONENT_NAME';
+import { LINK, COMPONENT_NAME } from './helper/routesDir/routeConstants';
 
 // -----------------------------------------------------------------------------------------
-// ------------------------------- Name To Link and Components -----------------------------
+// -------------------------------- Route Keys To Info -------------------------------------
 // -----------------------------------------------------------------------------------------
-const nameToLinkInfo = {
-  [NAME_HOTEL_VIEW]: { [LINK]: LINK_HOTEL_VIEW, [COMPONENT_NAME]: HotelView },
-  [NAME_TEST_PAGE_00]: { [LINK]: LINK_TEST_PAGE_00, [COMPONENT_NAME]: TestPage00 },
-};
+import routeKeysToInfo from './helper/routesDir/routeKeysToInfo';
 
 export default class Routes extends Component {
   // ---------------------------------------------------------------------------------------
@@ -41,13 +24,26 @@ export default class Routes extends Component {
     return (
       <Switch>
         <Route
-          path={nameToLinkInfo[NAME_TEST_PAGE_00][LINK]}
-          component={nameToLinkInfo[NAME_TEST_PAGE_00][COMPONENT_NAME]}
+          path={routeKeysToInfo[KEY_FLIGHT][LINK]}
+          component={routeKeysToInfo[KEY_FLIGHT][COMPONENT_NAME]}
         />
+
         <Route
-          path={nameToLinkInfo[NAME_HOTEL_VIEW][LINK]}
-          component={nameToLinkInfo[NAME_HOTEL_VIEW][COMPONENT_NAME]}
+          path={routeKeysToInfo[KEY_CAR_RENTAL][LINK]}
+          component={routeKeysToInfo[KEY_CAR_RENTAL][COMPONENT_NAME]}
         />
+
+        <Route
+          path={routeKeysToInfo[KEY_TOUR][LINK]}
+          component={routeKeysToInfo[KEY_TOUR][COMPONENT_NAME]}
+        />
+
+        {/* --- HOME ROUTE '/' has to be at the most bottom --- */}
+        <Route
+          path={routeKeysToInfo[KEY_HOTEL][LINK]}
+          component={routeKeysToInfo[KEY_HOTEL][COMPONENT_NAME]}
+        />
+        {/* --- HOME ROUTE '/' has to be at the most bottom --- */}
       </Switch>
     );
   }

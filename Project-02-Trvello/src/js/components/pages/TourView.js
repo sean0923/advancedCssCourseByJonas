@@ -6,14 +6,14 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 
 
-export default class HotelView extends Component {
+export default class TourView extends Component {
   // ---------------------------------------------------------------------------------------
   // ------------------------------------ Render -------------------------------------------
   // ---------------------------------------------------------------------------------------
   render() {
     return (
       <div className="hotel-view-temp">
-        <div>Hotel View</div>
+        <div>TourView</div>
       </div>
     );
   }
