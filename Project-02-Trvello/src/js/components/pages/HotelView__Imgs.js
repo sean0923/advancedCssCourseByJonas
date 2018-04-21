@@ -2,33 +2,40 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 // -----------------------------------------------------------------------------------------
-// ------------------------------------ Import Components  ---------------------------------
+// ------------------------------------ Imgs  ----------------------------------------------
 // -----------------------------------------------------------------------------------------
-import HotelView__Imgs from './HotelView__Imgs';
-import HotelView__InfoHeader from './HotelView__InfoHeader';
+import imgHotel1 from '../../../../assets/hotel-1.jpg';
+import imgHotel2 from '../../../../assets/hotel-2.jpg';
+import imgHotel3 from '../../../../assets/hotel-3.jpg';
+
+const imgSources = [imgHotel1, imgHotel2, imgHotel3];
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
-const Wrapper = styled.div`
-  background-color: rgba(0, 255, 0, .2);
-  flex: 1;
 
-  /* FOR TESTING ONLY */
-  height: 999px;
-  /* FOR TESTING ONLY */
+const ImgWrapper = styled.div`display: flex;`;
+
+const Img = styled.img`
+  width: 100%;
+  display: block; /* display: inline leave small space under */
 `;
 
-export default class HotelView extends Component {
+export default class HotelView__Imgs extends Component {
   // ---------------------------------------------------------------------------------------
   // ------------------------------------ Render -------------------------------------------
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <Wrapper>
-        <HotelView__Imgs />
-        <HotelView__InfoHeader />
-      </Wrapper>
+      <ImgWrapper>
+        {imgSources.map((src, idx) => {
+          return (
+            <div key={idx}>
+              <Img src={src} alt={`img-${idx}`} />
+            </div>
+          );
+        })}
+      </ImgWrapper>
     );
   }
 }
