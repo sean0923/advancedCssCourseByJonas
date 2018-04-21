@@ -58,7 +58,6 @@ const NavWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 
   padding: 3rem 0;
 `;
@@ -70,11 +69,13 @@ const NavItemText = styled.div`
   text-weight: bold;
   padding: 0 2rem;
   color: currentColor;
+
+  z-index: 10;
 `;
 
 const CopyWriteText = styled.div`
   color: var(--color-grey-light-4);
-  padding: 0rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
 `;
 
@@ -82,6 +83,7 @@ const StyledSvgIcon = styled(SvgIcon)`
   height: var(--size-svg-at-navbar) ;
   width: var(--size-svg-at-navbar) ;
   fill: currentColor;
+  z-index: 10;
 `;
 
 export default class Navbar extends Component {
