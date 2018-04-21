@@ -4,7 +4,14 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
+const Wrapper = styled.div`
+  background-color: rgba(0, 255, 0, .2);
+  flex: 1;
 
+  /* FOR TESTING ONLY */
+  height: 555px;
+  /* FOR TESTING ONLY */
+`;
 
 export default class HotelView extends Component {
   // ---------------------------------------------------------------------------------------
@@ -12,9 +19,9 @@ export default class HotelView extends Component {
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <div className="hotel-view-temp">
+      <Wrapper>
         <div>Hotel View</div>
-      </div>
+      </Wrapper>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Components ----------------------------------
@@ -51,9 +51,25 @@ const navbarItems = [
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
+const NavWrapper = styled.div`
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const CopyWriteText = styled.div`
+  color: var(--color-grey-light-4);
+  padding: 5rem 2rem;
+  text-align: center;
+`;
+
 const StyledSvgIcon = styled(SvgIcon)`
   height: var(--size-svg-at-navbar) ;
   width: var(--size-svg-at-navbar) ;
+  fill: currentColor;
 `;
 
 export default class Navbar extends Component {
@@ -62,18 +78,25 @@ export default class Navbar extends Component {
   // ---------------------------------------------------------------------------------------
   render() {
     return (
-      <div className="navbar">
+      <NavWrapper>
         <div>
           {navbarItems.map(item => {
             return (
-              <Link key={item.text} className="navbar-link" to={item.link}>
+              <NavLink
+                key={item.text}
+                className="navbar-link"
+                activeClassName="navbar-link navbar-link--active"
+                exact
+                to={item.link}
+              >
                 <StyledSvgIcon icon={item.icon} />
-                <div>{item.text}</div>
-              </Link>
+                <span>{item.text}</span>
+              </NavLink>
             );
           })}
         </div>
-      </div>
+        <CopyWriteText>&copy; 2018 by Trevello. All rights reserved</CopyWriteText>
+      </NavWrapper>
     );
   }
 }

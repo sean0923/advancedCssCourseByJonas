@@ -6,5 +6,11 @@
 .navbar-link {
   text-decoration: none;
   display: block;
-  color: inherit;
+  color: var(--color-grey-light-3);
+
+  
+
+  &--active {
+    color: var(--color-grey-dark-3);
+  }
 }
