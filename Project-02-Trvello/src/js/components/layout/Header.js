@@ -23,7 +23,7 @@ const WrapperHeader = styled.div`
 `;
 
 const LogoImg = styled.img`
-  margin-left: 2rem;
+  margin-left: 3rem;
   height: 3rem;
 `;
 
