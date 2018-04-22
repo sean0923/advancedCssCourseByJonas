@@ -129,7 +129,7 @@ export default class HotelView__Body extends Component {
           Lucy and 3 other friends reccomand this hotel
         </TextUserRecommandation>
         {userImgSources.map((src, idx) => {
-          return <Img src={src} alt={`user-${idx}`} />;
+          return <Img key={idx} src={src} alt={`user-${idx}`} />;
         })}
       </BoxLeft_BoxUserRecomandations>
     );
