@@ -45,7 +45,11 @@ const BoxRight = styled.div`
 
 const BoxLeft_TextMain = styled.div`${temp};`;
 
-const BoxLeft_BoxPhoto = styled.div`${temp};`;
+const BoxLeft_BoxUserRecomandations = styled.div`
+  ${temp};
+  display: flex;
+  align-items: center;
+`;
 
 const List = styled.ul`
   list-style: none;
@@ -72,6 +76,22 @@ const ListItems = styled.li`
   }
 `;
 
+const Img = styled.img`
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-sizing: content-box;
+  &:not(:last-child) {
+    margin-right: -1.5rem;
+  }
+`;
+
+const TextUserRecommandation = styled.div`
+  font-size: 1.3rem;
+  margin-right: auto;
+`;
+
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Data List ------------------------------------------
 // -----------------------------------------------------------------------------------------
@@ -90,6 +110,32 @@ const userImgSources = [imgUser1, imgUser2, imgUser3, imgUser4];
 
 export default class HotelView__Body extends Component {
   // ---------------------------------------------------------------------------------------
+  // ------------------------------------ Sub Render ---------------------------------------
+  // ---------------------------------------------------------------------------------------
+  renderList() {
+    return (
+      <List>
+        {listItems.map((str, idx) => {
+          return <ListItems key={idx}>{str}</ListItems>;
+        })}
+      </List>
+    );
+  }
+
+  renderUserReviewBox() {
+    return (
+      <BoxLeft_BoxUserRecomandations>
+        <TextUserRecommandation>
+          Lucy and 3 other friends reccomand this hotel
+        </TextUserRecommandation>
+        {userImgSources.map((src, idx) => {
+          return <Img src={src} alt={`user-${idx}`} />;
+        })}
+      </BoxLeft_BoxUserRecomandations>
+    );
+  }
+
+  // ---------------------------------------------------------------------------------------
   // ------------------------------------ Render -------------------------------------------
   // ---------------------------------------------------------------------------------------
   render() {
@@ -97,17 +143,8 @@ export default class HotelView__Body extends Component {
       <Wrapper>
         <BoxLeft>
           <BoxLeft_TextMain>{faker.lorem.paragraph(5)}</BoxLeft_TextMain>
-          <List>
-            {listItems.map((str, idx) => {
-              return <ListItems key={idx}>{str}</ListItems>;
-            })}
-          </List>
-          <BoxLeft_BoxPhoto>
-            <div>Lucy and 3 other friends reccomand this hotel</div>
-            {userImgSources.map((src, idx) => {
-              return <img src={src} alt={`user-${idx}`} />;
-            })}
-          </BoxLeft_BoxPhoto>
+          {this.renderList()}
+          {this.renderUserReviewBox()}
         </BoxLeft>
         <BoxRight>BoxRight</BoxRight>
       </Wrapper>
