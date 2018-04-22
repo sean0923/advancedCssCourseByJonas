@@ -14,13 +14,14 @@ import imgUser4 from '../../../../assets/user-6.jpg';
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 const temp = `
-  background-color: var(--bg-color-temp);
-  border: 1px dotted red;
+  // background-color: var(--bg-color-temp);
+  // border: 1px dotted red;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   padding: 4.5rem;
+  font-size: 1.4rem;
 `;
 
 const BoxLeft = styled.div`
@@ -29,37 +30,43 @@ const BoxLeft = styled.div`
   background-color: #fff;
   box-shadow: var(--box-shawdow-2);
 
-  padding: 3rem;
+  padding: 0 3rem;
   margin-right: 4.5rem;
+
+  & > * {
+    padding: 3rem 0;
+  }
 `;
 
 const BoxRight = styled.div`
   ${temp};
   flex: 1;
-  padding: 3rem;
 `;
 
 const BoxLeft_TextMain = styled.div`
   ${temp};
-  padding: 2rem;
-`;
-
-const BoxLeft_BoxList = styled.div`
-  ${temp};
-  padding: 2rem;
 `;
 
 const BoxLeft_BoxPhoto = styled.div`
   ${temp};
-  padding: 1rem;
 `;
 
-const List = styled.li`list-style: none;`;
+const List = styled.ul`
+  list-style: none;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const ListItems = styled.li`
+  flex: 0 0 50%;
+`;
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Data List ------------------------------------------
 // -----------------------------------------------------------------------------------------
-const dataList = [
+const listItems = [
   'Close to the beach',
   'Breakfast included',
   'Free airport shuttle',
@@ -81,14 +88,13 @@ export default class HotelView__Body extends Component {
       <Wrapper>
         <BoxLeft>
           <BoxLeft_TextMain>{faker.lorem.paragraph(5)}</BoxLeft_TextMain>
-          <BoxLeft_BoxList>
-            <List>
-              {dataList.map((str, idx) => {
-                return <li key={idx}>{str}</li>;
-              })}
-            </List>
-          </BoxLeft_BoxList>
+          <List>
+            {listItems.map((str, idx) => {
+              return <ListItems key={idx}>{str}</ListItems>;
+            })}
+          </List>
           <BoxLeft_BoxPhoto>
+            <div>Lucy and 3 other friends reccomand this hotel</div>
             {userImgSources.map((src, idx) => {
               return <img src={src} alt={`user-${idx}`} />;
             })}

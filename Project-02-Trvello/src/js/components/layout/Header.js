@@ -20,7 +20,7 @@ const WrapperHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: var(--line-bottom);
+  border-bottom: var(--line);
 `;
 
 const LogoImg = styled.img`

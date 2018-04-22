@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
 
   background-color: #fff;
-  border-bottom: var(--line-bottom);
+  border-bottom: var(--line);
 `;
 
 const BoxLeft = styled.div`
