@@ -19,6 +19,7 @@
   --bg-color-temp: rgba(0, 200, 0, .2);
 
   --box-shawdow-1: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+  --box-shawdow-2: 0 2rem 5rem rgba(0, 0, 0, .06);
 
   --color-opaque-black: rgba(0, 0, 0, 0.2);
   --test-border: 1px solid black;
@@ -28,4 +29,6 @@
   --size-svg-at-navbar: 2rem;
 
   --size-svg-at-header-hotel-info: 2rem;
+
+  --line-bottom: 1px solid var(--color-grey-light-2);
 }
