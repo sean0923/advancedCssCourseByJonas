@@ -43,13 +43,9 @@ const BoxRight = styled.div`
   flex: 1;
 `;
 
-const BoxLeft_TextMain = styled.div`
-  ${temp};
-`;
+const BoxLeft_TextMain = styled.div`${temp};`;
 
-const BoxLeft_BoxPhoto = styled.div`
-  ${temp};
-`;
+const BoxLeft_BoxPhoto = styled.div`${temp};`;
 
 const List = styled.ul`
   list-style: none;
@@ -61,6 +57,19 @@ const List = styled.ul`
 
 const ListItems = styled.li`
   flex: 0 0 50%;
+  &::before {
+    content: '';
+    display: inline-block;
+
+    /* height n width can be apply only if display is block related */
+    height: 1rem;
+    width: 1rem;
+    margin-right: .5rem;
+
+    background-color: var(--color-primary);
+    -webkit-mask-image: url('../../../../assets/chevron-thin-right.svg');
+    -webkit-mask-size: cover; /* if icon is larger than bg size cover enble icon to be seen */
+  }
 `;
 
 // -----------------------------------------------------------------------------------------
