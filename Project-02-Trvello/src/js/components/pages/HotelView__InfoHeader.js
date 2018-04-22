@@ -9,16 +9,12 @@ import SvgIcon from '../sharedComponents/SvgIcon';
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
-const temp = `
-  background-color: var(--bg-color-temp);
-  border: 1px dotted red;
-`;
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
 
   background-color: #fff;
+  border-bottom: var(--line-bottom);
 `;
 
 const BoxLeft = styled.div`
@@ -45,9 +41,7 @@ const BoxLeft_HotelName = styled.div`
   font-size: 2rem;
 `;
 
-const BoxLeft_BoxStar = styled.div`
-  display: flex;
-`;
+const BoxLeft_BoxStar = styled.div`display: flex;`;
 
 const BoxRight_BoxLocation = styled.div`
   color: var(--color-primary);
