@@ -107,6 +107,26 @@ const TextUserRecommandation = styled.div`
   margin-right: auto;
 `;
 
+const AtagShowAll = styled.a`
+  display: inline-block;
+  color: var(--color-primary);
+  /* text-decoration: underline; */
+
+  text-align: center;
+  line-height: 1.4;
+  font-weight: bold;
+  cursor: pointer;
+
+  & > div {
+    display: inline-block;
+    border-bottom: 1px solid currentColor;
+    &:hover {
+      color: var(--color-primary-dark);
+      border-bottom: 1px solid currentColor;
+    }
+  }
+`;
+
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Data List ------------------------------------------
 // -----------------------------------------------------------------------------------------
@@ -165,7 +185,9 @@ export default class HotelView__Body extends Component {
         <BoxRight>
           <DetailedReview src={imgUser5} />
           <DetailedReview src={imgUser6} />
-          <div>show all a tag</div>
+          <AtagShowAll>
+            <div>Show all &rarr;</div>
+          </AtagShowAll>
         </BoxRight>
       </Wrapper>
     );
