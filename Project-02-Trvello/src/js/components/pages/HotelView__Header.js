@@ -73,7 +73,9 @@ const TextRate = styled.div`font-size: 1.8rem;`;
 
 const TextVote = styled.div`font-size: .8rem;`;
 
-const TextLocation = styled.div`font-size: 1.4rem;`;
+const TextLocation = styled.div`
+  font-size: 1.4rem;
+`;
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Svg Icons  ----------------------------------

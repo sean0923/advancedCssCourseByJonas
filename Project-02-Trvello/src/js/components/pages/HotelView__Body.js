@@ -3,12 +3,20 @@ import styled from 'styled-components';
 import faker from 'faker';
 
 // -----------------------------------------------------------------------------------------
+// ------------------------------------ Import Components  ---------------------------------
+// -----------------------------------------------------------------------------------------
+import DetailedReview from '../reusableComponents_0/DetailedReview';
+
+// -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Imgs  ---------------------------------------
 // -----------------------------------------------------------------------------------------
 import imgUser1 from '../../../../assets/user-3.jpg';
 import imgUser2 from '../../../../assets/user-4.jpg';
 import imgUser3 from '../../../../assets/user-5.jpg';
 import imgUser4 from '../../../../assets/user-6.jpg';
+
+import imgUser5 from '../../../../assets/user-1.jpg';
+import imgUser6 from '../../../../assets/user-2.jpg';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
@@ -41,6 +49,13 @@ const BoxLeft = styled.div`
 const BoxRight = styled.div`
   ${temp};
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  & > *:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
 `;
 
 const BoxLeft_TextMain = styled.div`${temp};`;
@@ -143,10 +158,15 @@ export default class HotelView__Body extends Component {
       <Wrapper>
         <BoxLeft>
           <BoxLeft_TextMain>{faker.lorem.paragraph(5)}</BoxLeft_TextMain>
+          <BoxLeft_TextMain style={{ paddingTop: 0 }}>{faker.lorem.paragraph(3)}</BoxLeft_TextMain>
           {this.renderList()}
           {this.renderUserReviewBox()}
         </BoxLeft>
-        <BoxRight>BoxRight</BoxRight>
+        <BoxRight>
+          <DetailedReview src={imgUser5} />
+          <DetailedReview src={imgUser6} />
+          <div>show all a tag</div>
+        </BoxRight>
       </Wrapper>
     );
   }
