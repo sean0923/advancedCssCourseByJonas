@@ -18,20 +18,41 @@ const Img = styled.img`
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
+  margin-right: 1.5rem;
 `;
+
+const BoxBottom = styled.div`display: flex;`;
+
+const UserName = styled.div`font-weight: bold;`;
+
+const Date = styled.div`font-size: 1rem;`;
+
+const Rate = styled.div`
+  margin-left: auto;
+
+  color: var(--color-primary);
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+`;
+
+const getRandNumBtw_8_10 = () => 8 + Math.round(Math.random() * 200) / 100;
 
 const DetailedReview = ({ src }) => {
   const pastDate = format(date.past(), 'MMM Do, YYYY');
 
   return (
     <Wrapper>
-      <MainText>{lorem.paragraph(1)}</MainText>
-      <Img src={src} alt="user img" />
-      <div>
-        <div>{`${name.firstName()} ${name.lastName()}`}</div>
-        <div>{pastDate}</div>
-      </div>
-      <div>rate</div>
+      <MainText>{lorem.sentence(20)}</MainText>
+      <BoxBottom>
+        <Img src={src} alt="user img" />
+        <div>
+          <UserName>{`${name.firstName()} ${name.lastName()}`}</UserName>
+          <Date>{pastDate}</Date>
+        </div>
+        <Rate>{getRandNumBtw_8_10()}</Rate>
+      </BoxBottom>
     </Wrapper>
   );
 };

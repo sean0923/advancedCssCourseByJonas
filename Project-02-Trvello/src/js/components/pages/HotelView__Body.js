@@ -157,8 +157,8 @@ export default class HotelView__Body extends Component {
     return (
       <Wrapper>
         <BoxLeft>
-          <BoxLeft_TextMain>{faker.lorem.paragraph(5)}</BoxLeft_TextMain>
-          <BoxLeft_TextMain style={{ paddingTop: 0 }}>{faker.lorem.paragraph(3)}</BoxLeft_TextMain>
+          <BoxLeft_TextMain>{faker.lorem.sentence(50)}</BoxLeft_TextMain>
+          <BoxLeft_TextMain style={{ paddingTop: 0 }}>{faker.lorem.sentence(30)}</BoxLeft_TextMain>
           {this.renderList()}
           {this.renderUserReviewBox()}
         </BoxLeft>
