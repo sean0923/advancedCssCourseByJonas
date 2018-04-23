@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import HotelView__Imgs from './HotelView__Imgs';
 import HotelView__Header from './HotelView__Header';
 import HotelView__Body from './HotelView__Body';
+import HotelView__Footer from './HotelView__Footer';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
@@ -30,6 +31,7 @@ export default class HotelView extends Component {
         <HotelView__Imgs />
         <HotelView__Header />
         <HotelView__Body />
+        <HotelView__Footer />
       </Wrapper>
     );
   }
