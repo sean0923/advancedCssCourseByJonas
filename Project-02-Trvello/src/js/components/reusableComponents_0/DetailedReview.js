@@ -37,7 +37,10 @@ const Rate = styled.div`
   align-items: center;
 `;
 
-const getRandNumBtw_8_10 = () => 8 + Math.round(Math.random() * 200) / 100;
+const getStrOfRandNumBtw_8_10 = () => {
+  const num = 8 + Math.round(Math.random() * 200) / 100;
+  return num.toString().slice(0, 4);
+};
 
 const DetailedReview = ({ src }) => {
   const pastDate = format(date.past(), 'MMM Do, YYYY');
@@ -51,7 +54,7 @@ const DetailedReview = ({ src }) => {
           <UserName>{`${name.firstName()} ${name.lastName()}`}</UserName>
           <Date>{pastDate}</Date>
         </div>
-        <Rate>{getRandNumBtw_8_10()}</Rate>
+        <Rate>{getStrOfRandNumBtw_8_10()}</Rate>
       </BoxBottom>
     </Wrapper>
   );
