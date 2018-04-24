@@ -1,10 +1,21 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+
+// -----------------------------------------------------------------------------------------
+// ------------------------------------ Styled Components ----------------------------------
+// -----------------------------------------------------------------------------------------
+const Wrapper = styled.div`
+  display: flex;
+`;
+
+
 const Home = () => {
   return (
-    <div>
+    <Wrapper>
       <div>Home</div>
-    </div>
+    </Wrapper>
   );
 };
 
