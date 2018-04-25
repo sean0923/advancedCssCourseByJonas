@@ -6,6 +6,7 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
   background: var(--color-primary);
+  grid-column: full-start / col-end 4;
 `;
 
 const StoryPcitures = () => {

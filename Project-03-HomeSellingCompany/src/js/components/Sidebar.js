@@ -6,14 +6,12 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
   background: var(--color-secondary);
+  grid-row: 1 / -1;
+  grid-column: sidebar-start / sidebar-end;
 `;
 
 const Sidebar = () => {
-  return (
-    <Wrapper>
-      Sidebar
-    </Wrapper>
-  );
+  return <Wrapper>Sidebar</Wrapper>;
 };
 
 export default Sidebar;

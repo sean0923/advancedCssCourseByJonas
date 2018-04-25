@@ -5,7 +5,8 @@ import styled from 'styled-components';
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
-  background: var(--color-secondary);
+  background: black;
+  grid-column: features-start / features-end;
 `;
 
 const Features = () => {

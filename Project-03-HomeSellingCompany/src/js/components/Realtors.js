@@ -5,7 +5,8 @@ import styled from 'styled-components';
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
-  background: var(--color-primary);
+  background: yellow;
+  grid-column: col-start 7 / full-end;
 `;
 
 const Realtors = () => {

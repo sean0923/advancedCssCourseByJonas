@@ -22,6 +22,14 @@ import StoryPictures from './components/StoryPictures';
 const Container = styled.div`
   display: grid;
   grid-template-rows: 80vh auto 40vw auto auto auto;
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [features-start center-start] repeat(8, [col-start] minmax(auto, 14rem) [col-end]) [center-end
+    features-end] minmax(6rem, 1fr) [full-end];
+
+  & > * {
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
 `;
 
 class ReactRouter extends Component {

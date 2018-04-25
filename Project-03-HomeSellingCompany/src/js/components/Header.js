@@ -6,6 +6,8 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
   background: var(--color-primary);
+  grid-row: 1/2;
+  grid-column: full-start / col-end 6;
 `;
 
 const Header = () => {
