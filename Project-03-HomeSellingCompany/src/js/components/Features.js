@@ -60,7 +60,7 @@ const Features = () => {
     <Wrapper>
       {dataForFeatures.map(({ text, iconName, description }) => {
         return (
-          <ItemWrapper>
+          <ItemWrapper key={iconName}>
             <StyledSvgIcon icon={iconName} />
             <div>
               <H4>{text}</H4>
