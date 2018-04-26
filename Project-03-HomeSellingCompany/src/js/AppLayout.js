@@ -27,8 +27,8 @@ const Container = styled.div`
     features-end] minmax(6rem, 1fr) [full-end];
 
   & > * {
-    padding: 2rem;
-    font-size: 1.6rem;
+    /* padding: 2rem; */
+    font-size: 2rem;
   }
 `;
 
