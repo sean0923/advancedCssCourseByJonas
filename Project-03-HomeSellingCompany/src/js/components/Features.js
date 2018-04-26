@@ -15,7 +15,8 @@ const Wrapper = styled.div`
   grid-column: features-start / features-end;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* auto-fit: fit as many as can  */
   grid-gap: 6rem;
 
   margin: 15rem 0;
