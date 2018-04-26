@@ -1,24 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import getZeroToNumMinusOneArr from '../helpers/getZeroToNumMinusOneArr';
+import dataForFeatures from './Features.data';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Import Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 import SvgIcon from '../common/SvgIcon';
-
-// -----------------------------------------------------------------------------------------
-// ------------------------------------ Import Icon Names ----------------------------------
-// -----------------------------------------------------------------------------------------
-import {
-  ICON_NAME_GLOBAL,
-  ICON_NAME_TROPHY,
-  ICON_NAME_MAP_PIN,
-  ICON_NAME_KEY,
-  ICON_NAME_PRESENTATION,
-  ICON_NAME_LOCK,
-} from '../helpers/nameIcons';
 
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
@@ -33,6 +21,12 @@ const Wrapper = styled.div`
   margin: 15rem 0;
 `;
 
+const H4 = styled.h4``;
+
+const P = styled.p``;
+// -----------------------------------------------------------------------------------------
+// ------------------------------------ Styled Svg Icon ------------------------------------
+// -----------------------------------------------------------------------------------------
 const StyledSvgIcon = styled(SvgIcon)`
   fill: var(--color-primary-dark);
   width: 3rem;
@@ -41,24 +35,17 @@ const StyledSvgIcon = styled(SvgIcon)`
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Data -----------------------------------------------
 // -----------------------------------------------------------------------------------------
-const featureItems = [
-  { text: 'World best luxry homes', iconName: ICON_NAME_GLOBAL },
-  { text: 'Only the best properties', iconName: ICON_NAME_TROPHY },
-  { text: 'All homes in top locations', iconName: ICON_NAME_MAP_PIN },
-  { text: 'New home in one week', iconName: ICON_NAME_KEY },
-  { text: 'Top 1% relators', iconName: ICON_NAME_PRESENTATION },
-  { text: 'Secure payments on XXX', iconName: ICON_NAME_LOCK },
-];
 
 const Features = () => {
   return (
     <Wrapper>
-      {featureItems.map(({ text, iconName }) => {
+      {dataForFeatures.map(({ text, iconName, description }) => {
         return (
           <div>
             <StyledSvgIcon icon={iconName} />
-            <div>{text}</div>
+            <H4>{text}</H4>
             <div>{iconName}</div>
+            <P>{description}</P>
           </div>
         );
       })}
