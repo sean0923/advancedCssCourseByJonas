@@ -21,7 +21,7 @@ const H2 = styled.h2`
   font-size: 4rem;
   line-height: 1.2;
   font-weight: 300;
-  padding-right: 10rem;
+  /* padding-right: 4rem; */
 `;
 
 const H3 = styled.h3`
@@ -32,14 +32,17 @@ const H3 = styled.h3`
   font-weight: bold;
 `;
 
-const Story = styled.p`font-size: 1.4rem;`;
+const Story = styled.p`
+  font-size: 1.4rem;
+  font-style: italic;
+`;
 
 const Button = styled.button`
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border: none;
-  padding: 1.4rem 2.8rem;
+  padding: 1.8rem 3rem;
   background-color: var(--color-primary);
   color: #fff;
   &:hover {
