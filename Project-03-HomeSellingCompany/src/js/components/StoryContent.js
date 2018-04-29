@@ -5,14 +5,14 @@ import styled from 'styled-components';
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
-  /* background: var(--color-secondary); */
+  background: var(--color-grey-light-1);
   grid-column: col-start 5 / full-end;
 
   display: grid;
   grid-template-columns: 1fr;
   align-content: center;
 
-  padding: 0 12rem;
+  padding: 0 8vw;
   justify-items: start;
 `;
 
