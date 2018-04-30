@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
-  background: var(--color-secondary);
+  background: var(--color-primary);
   grid-row: 1 / -1;
   grid-column: sidebar-start / sidebar-end;
 `;
