@@ -11,6 +11,7 @@ export const NAME_ICON_HEART_FULL = 'heart-full';
 export const NAME_ICON_KEY = 'key';
 export const NAME_ICON_MAP_PIN = 'map-pin';
 export const NAME_ICON_PROFILE_MAIL = 'profile-male';
+export const NAME_ICON_EXPAND = 'expand';
 
 const TEXT_HOUSE_1 = 'Beautiful Family House';
 const TEXT_HOUSE_2 = 'Modern Glass Villa';
