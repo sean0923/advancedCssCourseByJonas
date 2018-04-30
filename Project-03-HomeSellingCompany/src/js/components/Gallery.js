@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import srcGal_1 from '../../../assets/gal-1.jpeg';
 
+import dataGallery from './Gallery.data';
+
 // -----------------------------------------------------------------------------------------
 // ------------------------------------ Styled Components ----------------------------------
 // -----------------------------------------------------------------------------------------
@@ -32,9 +34,13 @@ const Img = styled.img`
 const Gallery = () => {
   return (
     <Wrapper>
-      <ImgWrapper>
-        <Img src={srcGal_1} alt={'gal img 1'} />
-      </ImgWrapper>
+      {dataGallery.map(({ src, style }, idx) => {
+        return (
+          <ImgWrapper key={idx} style={style}>
+            <Img src={src} alt={`gal-img-${idx}`} />
+          </ImgWrapper>
+        );
+      })}
     </Wrapper>
   );
 };
