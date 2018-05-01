@@ -16,11 +16,20 @@ const Wrapper = styled.div`
   grid-row: 1/2;
   grid-column: full-start / col-end 6;
 
-  padding: 5rem 8rem;
+  padding: 5rem 8rem 8rem 8rem;
 
   background-image: linear-gradient(var(--color-secondary-opaque), var(--color-secondary-opaque)),
     url(${srcOfBgImg});
   background-size: cover;
+
+  display:grid;
+  grid-template-rows: 1fr min-content min-content 1fr min-content min-content;
+  grid-gap: 1.5rem;
+
+  & > button {
+    justify-self: start;
+    align-self: center;
+  }
 `;
 
 const LogoBox = styled.div`
@@ -28,38 +37,27 @@ const LogoBox = styled.div`
   & > img {
     width: 12rem;
   }
-  margin-bottom: 12rem;
 `;
 
-const TitleBox = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: start;
-  grid-gap: 1rem;
-
-  & > *:nth-child(2) {
-    margin-bottom: 2rem;
-  }
-
-  margin-bottom: 12rem;
-`;
 
 const AsSeenOnBox = styled.div`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  grid-gap: 1.5rem;
+
   align-items: center;
 
-  & > div:nth-child(1),
-  & > div:nth-child(3) {
+  color: var(--color-grey-light-2);
+  font-size: 1.4rem;
+  
+  &::after,
+  &::before {
+    content: '';
+    background-color: currentColor;
     height: 1px;
-    background-color: var(--color-grey-light-2);
   }
 
-  & > div:nth-child(2) {
-    padding: 1rem 2.5rem;
-    color: var(--color-grey-light-2);
-    font-size: 1.4rem;
-  }
+  /* margin-bottom: 2rem; */
 `;
 
 const CompLogoBox = styled.div`
@@ -70,6 +68,7 @@ const CompLogoBox = styled.div`
 
   & > img {
     height: 2.5rem;
+    filter: brightness(70%);
   }
 `;
 
@@ -79,15 +78,13 @@ const Header = () => {
       <LogoBox>
         <img src={srcOfHeadLogo} alt="head logo" />
       </LogoBox>
-      <TitleBox>
+      {/* <TitleBox> */}
         <h3 className="h3">YOUR OWN HOME</h3>
         <h1 className="h1">The ultimate personal freedom</h1>
         <button className="btn">View Our Properties</button>
-      </TitleBox>
+      {/* </TitleBox> */}
       <AsSeenOnBox>
-        <div />
         <div>As seen on</div>
-        <div />
       </AsSeenOnBox>
       <CompLogoBox>
         <img src={srcOfCompLogo1} alt="logo 1" />
