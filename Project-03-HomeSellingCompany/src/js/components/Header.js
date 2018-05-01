@@ -16,13 +16,10 @@ const Wrapper = styled.div`
   grid-row: 1/2;
   grid-column: full-start / col-end 6;
 
-  padding: 4rem 6rem;
-
-  /* background-image: url(${srcOfBgImg}),
-    linear-gradient(var(--color-secondary-opaque), var(--color-secondary-opaque)); */
+  padding: 5rem 8rem;
 
   background-image: linear-gradient(var(--color-secondary-opaque), var(--color-secondary-opaque)),
-  url(${srcOfBgImg});
+    url(${srcOfBgImg});
   background-size: cover;
 `;
 
@@ -31,7 +28,7 @@ const LogoBox = styled.div`
   & > img {
     width: 12rem;
   }
-  margin-bottom: 13rem;
+  margin-bottom: 12rem;
 `;
 
 const TitleBox = styled.div`
@@ -39,11 +36,12 @@ const TitleBox = styled.div`
   grid-template-columns: 1fr;
   justify-items: start;
   grid-gap: 1rem;
-  margin-bottom: 8rem;
 
   & > *:nth-child(2) {
     margin-bottom: 2rem;
   }
+
+  margin-bottom: 12rem;
 `;
 
 const AsSeenOnBox = styled.div`
@@ -68,10 +66,10 @@ const CompLogoBox = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-items: center;
+  grid-row-gap: 3rem;
 
   & > img {
-    /* width: 100%; */
-    height: 100%;
+    height: 2.5rem;
   }
 `;
 
